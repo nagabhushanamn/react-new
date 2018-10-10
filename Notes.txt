@@ -1,0 +1,216 @@
+
+
+------------------------------------------
+HTML
+CSS
+javascript - es6
+------------------------------------------
+
+
+
+what .js-programs can do with HTML-page in browser envi ?
+
+using browser provided web-APIs,
+JavaScript-lang can bring any dynamic activity/data to web-page
+
+browser-APIs :  ==> are based on 'w3c' recommendations ,
+they are implemented nativly by browser & abstracted as JavaScript objects & functions
+
+browser-APIs  :
+    ==> DOM, XHR,Timer, HTML5 APIs
+
+using DOM API
+--------------
+ -> can create,retreive,update,delete HTML elements
+ -> can change element's inner text/html content 
+ -> can change element's attributes/properties
+ -> can change element's styles ( css )
+ -> can validate form-fields before submit to server-program
+ -> can create rich UI-components like ...
+
+using XHR/Fetch API
+--------------------
+ -> can communicate with server-side programs async 
+
+using Timer API
+---------------
+ -> can execute any action on timeout/time-interval
+
+
+ //-------------------------------------------------------------------
+
+
+
+
+
+ problems with plain-js ( your code ) with browser apis
+ ---------------------------------------------------------
+
+
+    => browser compatability issues
+    => memory mamanagement is manual ( i.e clean un-used DOM elements)
+    => performance issues ( i.e DOM access should be minimal )
+    => data-binding is manual
+    => too much code for simple operation
+    => code oraganization is difficult
+
+
+soln:
+
+    ==> using server-side page techonolgies
+
+            - JSP,ASP,PHP,....
+     
+        problems:
+
+            => on every request, server-side-programs need to re-construct same UI layout with new content,
+               keeping client state
+            => on every request, server programs txring same resources,
+               this will increase n/w bandwidth
+            => on every response,
+               browser reloads current page with new-page     
+
+best-soln:
+
+     => use client-side techonolgies
+
+      i.e using third-party js lib & F.Ws
+
+
+      1. jQuery
+
+            => browser compatability issues solved on DOM API
+
+      MVC/MVVM  arch  
+
+      2. Backbone.js
+      3. Knockout.js
+      4. Ember.js
+      5. ANGular.js   by google-team
+      6. DOJO
+      7. EXtJS
+      ..........
+
+
+   w3c  ==>  web-component/custom-element/custom-tag spec  ( draft )  ==> component arch
+
+
+     1. React.js   from facebook  : v16
+     2. Angular                   : v6 
+     3. Vue.js
+     4. Polymer.js
+     5. Aurelia.js
+
+    ------------------------------------------------------------------------
+
+
+    component based arch
+    --------------------
+
+
+    in web-ui ,   what is component ?
+
+    independent UI fragement in web-page with single-responsibility
+
+        e.g  Box
+             Input
+             ...
+
+
+    is HTML based on component based arch ?  Yes
+
+
+    HTML component/element/tag
+    ---------------------------
+
+    => every html-tag/element/component
+       is an instance of HTMLXXXElement class
+
+     e.g
+
+    <div></div>  instanceof 'HTMLDivElement' class
+
+
+    i.e
+
+    HTMLDivElement      ==> component-class
+    <div></div>         ==> component-instance
+
+
+    -------------------------------------------
+
+    html-component
+    --------------
+
+    - props    ==> immutable-data given by parent-component to child component
+
+
+    ---------------------------------------------------------------------------
+
+        
+    2 types of HTML components
+
+        - stateless
+        - statefull      
+
+
+    e.g input-element   ==> statefull HTML component
+
+            state : i.e 'value'
+
+    
+    imp-note : when component's state changes,always will re-render        
+   
+
+    ---------------------------------------------------------------------------
+
+    in component based arch  ==> uni-directional data-flow
+
+    data/props will go down
+    action/event will come up
+             
+
+    ---------------------------------------------------------------------------
+
+
+
+    when developing front-end applicaton,
+
+    --> transpile higher js code to lower version  in advance
+    --> bundle all modules into one file
+    --> minify
+    --> run test-cases.
+
+    .....
+
+    who can all these ?
+
+    ==> web-pack tool using many plugins & loaders
+
+    how can use this tools with react appln?
+
+
+    using 'create-react-app' cli tool  from facebook
+
+    
+
+
+-----------------------------------------------------------
+
+
+React component's
+
+    - properties
+    - state
+
+
+-----------------------------------------------------------
+
+
+
+
+
+
+
+    
+
